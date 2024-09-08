@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-image: url('miffy_yellow.jpg');
+    background-repeat: repeat;
+    background-size: 100px 100px; /* Adjust this value to make the pattern larger or smaller */
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    color: #FF69B4; /* A pink color that might go well with the bunny theme */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* A more playful font */
+}
+
+.page-title h2 {
+    color: #8f94ed; /* A pink color that might go well with the bunny theme */
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* A more playful font */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10%;
+    padding: 5% 0;
+}
+
+.grid-item {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+    filter: blur(1.25rem); /* Initial blur */
+
+}
+
+.grid-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item .caption {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.grid-item.active img {
+    filter: blur(0); /* Remove blur on active state */
+}
+
+.grid-item.active .overlay {
+    opacity: 0;
+}
+
+/* Media queries remain the same */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-title h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* iPhone-specific adjustments */
+@media (max-width: 414px) { /* This covers most iPhone models in portrait mode */
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1%; /* Minimal gap for iPhones */
+    }
+
+    .container {
+        width: 95%; /* Increase the content width to use more screen space */
+        padding: 10px; /* Reduce padding to maximize space for content */
+    }
+}
