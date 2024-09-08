@@ -25,14 +25,14 @@ body {
     color: #FF69B4; /* A pink color that might go well with the bunny theme */
     font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* A more playful font */
+    font-family: 'Comic Sans MS', sans-serif; /* A more playful font */
 }
 
 .page-title h2 {
-    color: #8f94ed; /* A pink color that might go well with the bunny theme */
+    color: #8f94ed; 
     font-size: 1.5em;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* A more playful font */
+    font-family: 'Comic Sans MS', sans-serif; /* A more playful font */
 }
 
 .image-grid {
@@ -78,9 +78,11 @@ body {
 }
 
 .grid-item .caption {
-    color: white;
+    color: #fbf833;
     text-align: center;
     padding: 10px;
+    font-size: 1em;
+    font-family: 'Comic Sans MS', sans-serif;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }

@@ -1,13 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     const gridItems = document.querySelectorAll('.grid-item');
-
-//     gridItems.forEach(item => {
-//         item.addEventListener('click', function() {
-//             this.classList.toggle('active');
-//         });
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function() {
     const gridItems = document.querySelectorAll('.grid-item');
 
